@@ -14,25 +14,34 @@ namespace demo01
             int x = 0;
             Console.WriteLine("请输入一个大于一的整数");
             string y = Console.ReadLine();
-            for (int i = 2; i <= int.Parse(y); i++)
+            int z;
+            if (int.TryParse(y, out z))
             {
-                bool z = true;
-                for (int j = 2; j <= i / 2; j++)
+                for (int i = 2; i <= z; i++)
                 {
-                    if (i % j == 0)
+                    bool a = true;
+                    for (int j = 2; j <= i / 2; j++)
                     {
-                        z = false;
-                        break;
+                        if (i % j == 0)
+                        {
+                            a = false;
+                            break;
+                        }
                     }
-                }
 
-                if (z)
-                {
-                    x++;
-                }
+                    if (a)
+                    {
+                        x++;
+                    }
 
+                }
+                Console.WriteLine("其中有{0}个质数", x);
             }
-            Console.WriteLine("其中有{0}个质数", x);
+            else
+            {
+                Console.WriteLine("输入的格式不正确！");
+                Console.ReadKey();
+            }
         }
     }
 }

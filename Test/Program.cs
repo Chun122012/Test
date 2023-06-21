@@ -12,7 +12,7 @@ namespace demo01
         static void Main(string[] args)
         {
             int x = 0;
-            Console.WriteLine("请输入一个大于一的整数");
+            Console.WriteLine("请输入一个大于1的整数");
             string y = Console.ReadLine();
             int z;
             if (int.TryParse(y, out z))
@@ -39,7 +39,7 @@ namespace demo01
             }
             else
             {
-                Console.WriteLine("输入的格式不正确！");
+                Console.WriteLine("输入的格式不正确！请输入一个大于1的整数");
                 Console.ReadKey();
             }
         }

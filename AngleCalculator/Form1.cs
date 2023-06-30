@@ -25,18 +25,18 @@ namespace AngleCalculator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!int.TryParse(textBox1.Text, out int AX) || !int.TryParse(textBox4.Text, out int AY) ||
-                !int.TryParse(textBox2.Text, out int BX) || !int.TryParse(textBox5.Text, out int BY) ||
-                !int.TryParse(textBox3.Text, out int CX) || !int.TryParse(textBox6.Text, out int CY)
+            if (!float.TryParse(textBox1.Text, out float AX) || !float.TryParse(textBox4.Text, out float AY) ||
+                !float.TryParse(textBox2.Text, out float BX) || !float.TryParse(textBox5.Text, out float BY) ||
+                !float.TryParse(textBox3.Text, out float CX) || !float.TryParse(textBox6.Text, out float CY)
                 )
             {
                 MessageBox.Show("请输入正确的坐标！", "输入错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
                 
-                Point pointA = new Point(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox4.Text));
-                Point pointB = new Point(Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox5.Text));
-                Point pointC = new Point(Convert.ToInt32(textBox3.Text), Convert.ToInt32(textBox6.Text));
+                PointF pointA = new PointF(Convert.ToSingle(textBox1.Text), Convert.ToSingle(textBox4.Text));
+                PointF pointB = new PointF(Convert.ToSingle(textBox2.Text), Convert.ToSingle(textBox5.Text));
+                PointF pointC = new PointF(Convert.ToSingle(textBox3.Text), Convert.ToSingle(textBox6.Text));
 
                 float AB = (float)Math.Sqrt(Math.Pow(pointA.X - pointB.X, 2) + Math.Pow(pointA.Y - pointB.Y, 2));
                 float AC = (float)Math.Sqrt(Math.Pow(pointA.X - pointC.X, 2) + Math.Pow(pointA.Y - pointC.Y, 2));

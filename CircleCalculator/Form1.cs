@@ -40,9 +40,9 @@ namespace CircleCalculator
             float a = (float)Math.Sqrt(Math.Pow(pointB.X - pointC.X, 2) + Math.Pow(pointB.Y - pointC.Y, 2));
 
 
-            // 计算斜率
-            float k1 = (pointB.Y - pointA.Y) / (pointB.X - pointA.X);
-            float k2 = (pointC.Y - pointB.Y) / (pointC.X - pointB.X);
+            // 计算斜率a、c两边的斜率
+            float k1 = (pointC.Y - pointB.Y) / (pointC.X - pointB.X);
+            float k2 = (pointB.Y - pointA.Y) / (pointB.X - pointA.X);
 
             // 判断是否共线
             if (k1 == k2)
@@ -57,9 +57,6 @@ namespace CircleCalculator
             //三角形面积
             float area = (float)Math.Sqrt(s * (s - a) * (s - b) * (s - c));
 
-
-            float outX, outY;
-
             //三角形内切圆圆心坐标
             PointF pointIn = new PointF(
                 (c * pointC.X + b * pointB.X + a * pointA.X) / (a + b + c), 
@@ -71,10 +68,18 @@ namespace CircleCalculator
             //三角形外切圆半径
             float rOut = a * b * c / (4 * area);
 
+            //a、c两边的中点坐标
+            PointF pointMidA = new PointF((pointC.X + pointB.X) / 2, (pointC.Y + pointB.Y) / 2);
+            PointF pointMidC = new PointF((pointB.X + pointA.X) / 2, (pointB.Y + pointA.Y) / 2);
+
+            //求出a、c的中垂线的斜率
+            float ka = -1 / k1;
+            float kc = -1 / k2;
 
             //三角形外切圆圆心坐标
-            PointF pointOut = new PointF((pointC.X + pointB.X + pointA.X) / 3, (pointC.Y + pointB.Y + pointA.Y) / 3);
-            
+            PointF pointOut = new PointF();
+            pointOut.X = (pointMidC.Y - pointMidA.Y + k1 * pointMidA.X - k2 * pointMidC.X) / (k1 - k2);
+            pointOut.Y = k1 * (pointOut.X - pointMidA.X) + pointMidA.Y;
 
             label11.Text = $"({pointIn.X:F2}, {pointIn.Y:F2})";
             label12.Text = $"{rIn:F2}";

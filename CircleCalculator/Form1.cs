@@ -39,7 +39,6 @@ namespace CircleCalculator
             float b = (float)Math.Sqrt(Math.Pow(pointA.X - pointC.X, 2) + Math.Pow(pointA.Y - pointC.Y, 2));
             float a = (float)Math.Sqrt(Math.Pow(pointB.X - pointC.X, 2) + Math.Pow(pointB.Y - pointC.Y, 2));
 
-
             // 计算斜率a、c两边的斜率
             float k1 = (pointC.Y - pointB.Y) / (pointC.X - pointB.X);
             float k2 = (pointB.Y - pointA.Y) / (pointB.X - pointA.X);

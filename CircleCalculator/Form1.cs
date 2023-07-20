@@ -1,5 +1,4 @@
-﻿using MathNet.Numerics.LinearAlgebra;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,11 +39,10 @@ namespace CircleCalculator
             float b = (float)Math.Sqrt(Math.Pow(pointA.X - pointC.X, 2) + Math.Pow(pointA.Y - pointC.Y, 2));
             float a = (float)Math.Sqrt(Math.Pow(pointB.X - pointC.X, 2) + Math.Pow(pointB.Y - pointC.Y, 2));
 
-            // 计算斜率a、b、c两边的斜率
+            // 计算斜率a、c、b边的斜率
             float k1 = (pointC.Y - pointB.Y) / (pointC.X - pointB.X);
             float k2 = (pointB.Y - pointA.Y) / (pointB.X - pointA.X);
             float k3 = (pointC.Y - pointA.Y) / (pointC.X - pointA.X);
-
 
             // 判断是否共线
             if (k1 == k2)
@@ -70,28 +68,21 @@ namespace CircleCalculator
             //三角形外切圆半径
             float rOut = a * b * c / (4 * area);
 
-            //a、c两边的中点坐标
+            //a、c、b边的中点坐标
             PointF pointMidA = new PointF((pointC.X + pointB.X) / 2, (pointC.Y + pointB.Y) / 2);
-            PointF pointMidB = new PointF((pointC.X + pointA.X) / 2, (pointC.Y + pointA.Y) / 2);
             PointF pointMidC = new PointF((pointB.X + pointA.X) / 2, (pointB.Y + pointA.Y) / 2);
+            PointF pointMidB = new PointF((pointC.X + pointA.X) / 2, (pointC.Y + pointA.Y) / 2);
 
-            //求出a、b、c的中垂线的斜率
+            //求出a、c、b的中垂线的斜率
             float ka = -1 / k1;
             float kc = -1 / k2;
             float kb = -1 / k3;
 
             //三角形外切圆圆心坐标
-
-            
             PointF pointOut = new PointF();
-
-
-            // 定义方程组
-            //ka * (pointOut.X - pointMidA.X) - pointOut.Y + pointMidA.Y == 0;
-            //kb * (pointOut.X - pointMidB.X) - pointOut.Y + pointMidB.Y == 0;
             pointOut.X = (ka * pointMidA.X - pointMidA.Y - kb * pointMidB.X + pointMidB.Y) / (ka - kb);
-            pointOut.Y = ka * (((ka * pointMidA.X - pointMidA.Y - kb * pointMidB.X + pointMidB.Y) / (ka - kb)) - pointMidA.X) + pointMidA.Y ;
-
+            pointOut.Y = k1 * (((ka * pointMidA.X - pointMidA.Y - kb * pointMidB.X + pointMidB.Y) / (ka - kb)) - pointMidA.X) + pointMidA.Y;
+           
 
             label11.Text = $"({pointIn.X:F2}, {pointIn.Y:F2})";
             label12.Text = $"{rIn:F2}";

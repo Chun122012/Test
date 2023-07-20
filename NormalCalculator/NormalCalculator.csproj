@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DDF36077-DB51-44C0-9AFE-36DEE60DF6C0}</ProjectGuid>
+    <ProjectGuid>{AC81C83D-DA8B-46F1-BF34-A18D487C0DA7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>CircleCalculator</RootNamespace>
-    <AssemblyName>CircleCalculator</AssemblyName>
+    <RootNamespace>NormalCalculator</RootNamespace>
+    <AssemblyName>NormalCalculator</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />

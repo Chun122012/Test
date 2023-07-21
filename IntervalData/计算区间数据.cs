@@ -96,12 +96,12 @@ namespace IntervalData
             {
                 try
                 {
-                    string s1, s2, s3;
-                    s1 = dataGridView1.Rows[i].Cells[0].Value.ToString();
-                    s2 = dataGridView1.Rows[i].Cells[1].Value.ToString();
-                    s3 = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                    string prefix, start, end;
+                    prefix = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                    start = dataGridView1.Rows[i].Cells[1].Value.ToString();
+                    end = dataGridView1.Rows[i].Cells[2].Value.ToString();
                     //格式校验
-                    if (s1 == "")
+                    if (prefix == "")
                     {
                         if (intervals[intervals.Count - 1].Start < int.Parse(dataGridView1.Rows[i - 1].Cells[1].Value.ToString()))
                         {
@@ -109,18 +109,16 @@ namespace IntervalData
                         }
                         return;
                     }
-                    else if (!Regex.IsMatch(s1, "^[A-Z]{1}$"))
+                    else if (!Regex.IsMatch(prefix, "^[A-Z]{1}$"))
                     {
                         throw new Exception("前缀名称输入不正确");
                     }
-                    else if (s2 == null || s3 == null || s2.Length == 0 || s3.Length == 0)
+                    else if (start == null || end == null || start.Length == 0 || end.Length == 0)
                     {
                         throw new Exception("起点、终点数据不能为空");
                     }
 
-                    Interval interval = new Interval(s1,
-                        int.Parse(s2),
-                        int.Parse(s3));
+                    Interval interval = new Interval(prefix,int.Parse(start),int.Parse(end));
                     if (i > 0 && interval.Start < int.Parse(dataGridView1.Rows[i - 1].Cells[2].Value.ToString()))
                     {
                         throw new Exception("前后区间应连贯");

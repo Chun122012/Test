@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntervalData", "IntervalDat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NormalCalculator", "NormalCalculator\NormalCalculator.csproj", "{AC81C83D-DA8B-46F1-BF34-A18D487C0DA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "三角形向量计算", "三角形向量计算\三角形向量计算.csproj", "{A12B80F6-3A54-484A-AD73-66D8B08CB8E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "math", "Math\math.csproj", "{3D144E05-A41D-4384-8EBC-CA5FB276FCEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{AC81C83D-DA8B-46F1-BF34-A18D487C0DA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC81C83D-DA8B-46F1-BF34-A18D487C0DA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC81C83D-DA8B-46F1-BF34-A18D487C0DA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A12B80F6-3A54-484A-AD73-66D8B08CB8E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A12B80F6-3A54-484A-AD73-66D8B08CB8E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A12B80F6-3A54-484A-AD73-66D8B08CB8E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A12B80F6-3A54-484A-AD73-66D8B08CB8E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D144E05-A41D-4384-8EBC-CA5FB276FCEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D144E05-A41D-4384-8EBC-CA5FB276FCEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D144E05-A41D-4384-8EBC-CA5FB276FCEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D144E05-A41D-4384-8EBC-CA5FB276FCEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

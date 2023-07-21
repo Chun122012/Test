@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,16 +40,16 @@ namespace NormalCalculator
             string[] A = textA.Split(',', (char)StringSplitOptions.RemoveEmptyEntries);
             string[] B = textB.Split(',', (char)StringSplitOptions.RemoveEmptyEntries);
             string[] C = textC.Split(',', (char)StringSplitOptions.RemoveEmptyEntries);
-            if (!float.TryParse(A[0], out float AX) || !float.TryParse(A[1], out float AY) ||
-                !float.TryParse(A[2], out float AZ) || !float.TryParse(B[0], out float BX) ||
-                !float.TryParse(B[1], out float BY) || !float.TryParse(B[2], out float BZ) ||
-                !float.TryParse(C[0], out float CX) || !float.TryParse(C[1], out float CY) ||
-                !float.TryParse(C[2], out float CZ) 
-                )
-            {
-                MessageBox.Show("输入的坐标点格式不正确，请输入正确的坐标", "输入错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            
+            float AX = float.Parse(A[0]);
+            float AY = float.Parse(A[1]);
+            float AZ = float.Parse(A[2]);
+            float BX = float.Parse(B[0]);
+            float BY = float.Parse(B[1]);
+            float BZ = float.Parse(B[2]);
+            float CX = float.Parse(C[0]);
+            float CY = float.Parse(C[1]);
+            float CZ = float.Parse(C[2]);
 
             //A、B、C三点的坐标
             Vector3 PointA = new Vector3(AX, AY, AZ);

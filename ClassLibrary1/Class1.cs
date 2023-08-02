@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
+﻿using System.Drawing;
 using System.Numerics;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace math
+namespace ClassLibrary1
 {
-    public class Count 
+    public class Class1 : Point 
     {
         public static void Text1(PointF A, PointF B, float L)
         {
@@ -34,23 +28,23 @@ namespace math
 
         public static void Text2(PointF pointA, float offset)
         {
-            PointF O = new(0,0);
+            PointF O = new(0, 0);
             PointF C = new();
 
             O.X = 0; O.Y = 0;
             float OA = (float)Math.Sqrt(Math.Pow((pointA.X - O.X), 2) + Math.Pow((pointA.Y - O.Y), 2));
 
-            float angle ;
+            float angle;
 
             float cosAngle = (pointA.X * pointA.X + OA * OA - pointA.Y * pointA.Y) / (2 * pointA.X * OA);
-            angle = (float)Math.Acos(cosAngle) ;
+            angle = (float)Math.Acos(cosAngle);
 
             C.X = pointA.X + offset * (float)Math.Cos(angle);
             C.Y = pointA.Y + offset * (float)Math.Sin(angle);
             Console.WriteLine($"该点的坐标为：({C.X:F1}, {C.Y:F1})");
         }
 
-        public static void Text3(PointF A, PointF B,float Rotation_A, float R)
+        public static void Text3(PointF A, PointF B, float Rotation_A, float R)
         {
             if (A == B)
             {
@@ -107,7 +101,7 @@ namespace math
             {
                 throw new Exception("坐标输入格式不正确，A、B或C、D坐标不能相同");
             }
-            
+
             float k1 = (B.Y - A.Y) / (B.X - A.X);
             float k2 = (D.Y - C.Y) / (D.X - C.X);
             if (k1 == k2)
@@ -128,14 +122,14 @@ namespace math
             PointF M = new();
             PointF N = new();
 
-            float AO = (float)Math.Sqrt((O.X-A.X) * (O.X - A.X) + (O.Y - A.Y) * (O.Y - A.Y));
-            
+            float AO = (float)Math.Sqrt((O.X - A.X) * (O.X - A.X) + (O.Y - A.Y) * (O.Y - A.Y));
+
 
             float angleMOA = (float)Math.Atan2(AO, R) * 180 / (float)Math.PI;
             float angleNOA = angleMOA;
 
-            M.X = O.X  + R * (float)Math.Cos(angleMOA);
-            M.Y = O.Y  + R * (float)Math.Sin(angleMOA);
+            M.X = O.X + R * (float)Math.Cos(angleMOA);
+            M.Y = O.Y + R * (float)Math.Sin(angleMOA);
 
             N.X = O.X - R * (float)Math.Cos(angleNOA);
             N.Y = O.Y - R * (float)Math.Sin(angleNOA);
@@ -153,14 +147,14 @@ namespace math
             float b1 = 2 * k * (b - O.Y) - 2 * O.X;
             float c = O.X * O.X + (b - O.Y) * (b - O.Y) - R * R;
 
-            
-            if (b1*b1 - 4*a*c < 0)
+
+            if (b1 * b1 - 4 * a * c < 0)
             {
                 Console.WriteLine("直线与圆没有交点");
             }
             else if (b1 * b1 - 4 * a * c == 0)
             {
-                float X = -b1 / 2*a;
+                float X = -b1 / 2 * a;
                 float Y = k * X + b;
                 Console.WriteLine("直线与圆有一个交点，交点为：({0}, {1})", X, Y);
             }
@@ -174,15 +168,15 @@ namespace math
             }
         }
 
-        
+
 
         public static void Text8(PointF O, float R, PointF P)
         {
-            if ((P.X - O.X) * (P.X - O.X) + (P.Y - O.Y) * (P.Y - O.Y) != R * R)
-            {
-                Console.WriteLine("P点不是圆的切点，请重新输入");
-                return;
-            }
+            //if((P.X - O.X)*(P.X - O.X) + (P.Y - O.Y)*(P.Y - O.Y) != R * R)
+            //{
+            //    Console.WriteLine("P点不是圆的切点，请重新输入");
+            //    return;
+            //}
 
             PointF X = new();
 
@@ -197,8 +191,7 @@ namespace math
 
             angle = (float)Math.Atan2(P.Y, P.X - X.X) * 180 / (float)Math.PI;
 
-            Console.WriteLine("切点P的切线的方向角度数是：{0:F1}",angle);
+            Console.WriteLine("切点P的切线的方向角度数是：{0:F1}", angle);
         }
     }
-
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Numerics;
 using System.Reflection;
@@ -56,8 +57,38 @@ namespace 三角形向量计算
 
         private void button1_Click(object sender, EventArgs e)
         {
-            pictureBox1.Visible = true;  // 将PictureBox控件的可见性设置为true，显示图片
-            pictureBox1.Image = Image.FromFile("C:/Users/hasee/Desktop/图/示意图.jpg");  // 设置PictureBox控件的Image属性为要显示的图片
+
+            bool hasImage = File.Exists("示意图.jpg");
+
+
+            if (hasImage)
+            {
+                // 如果存在图片文件，则显示该图片
+                pictureBox1.Image = Image.FromFile("示意图.jpg");
+                pictureBox1.Visible = true;  // 将PictureBox控件的可见性设置为true，显示图片
+            }
+            else
+            {
+                // 如果不存在图片文件，则上传一张图片
+                OpenFileDialog openFileDialog1 = new OpenFileDialog();
+                openFileDialog1.Filter = "图片文件|*.jpg;*.jpeg;*.png;*.gif";
+                openFileDialog1.Title = "选择一张图片";
+
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    // 获取选择的图片路径
+                    string imagePath = openFileDialog1.FileName;
+
+                    // 上传图片
+                    File.Copy(imagePath, "示意图.jpg");
+
+                    // 显示上传的图片
+                    pictureBox1.Image = Image.FromFile("示意图.jpg");
+                }
+            }
+
+
+            //pictureBox1.Image = Image.FromFile("C:/Users/hasee/Desktop/图/示意图.jpg");  // 设置PictureBox控件的Image属性为要显示的图片
         }
 
         private void button2_Click(object sender, EventArgs e)

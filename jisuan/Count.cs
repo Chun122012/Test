@@ -125,14 +125,16 @@ namespace jisuan
                 return;
             }
 
-            float AM = (float)Math.Sqrt((O.X - A.X) * (O.X - A.X) + (O.Y - A.Y) * (O.Y - A.Y) - R * R);
-            float AN = AM;
+            float angle = (float)Math.Atan2(A.Y - O.Y, A.X - O.X);
+            float beta = (float)Math.Acos(R / AO);
 
-            M.Y = R / AO * AM;
-            N.Y = R / AO * AN;
+            float angle1 = angle + beta;
+            float angle2 = angle - beta;
 
-            M.X = (float)Math.Sqrt(R * R - M.Y * M.Y);
-            N.X = (float)Math.Sqrt(R * R - N.Y * N.Y);
+            M.X = O.X + R * (float)Math.Cos(angle1);
+            M.Y = O.Y + R * (float)Math.Sin(angle1);
+            N.X = O.X + R * (float)Math.Cos(angle2);
+            N.Y = O.Y + R * (float)Math.Sin(angle2);
 
             Console.WriteLine($"该点的坐标为：({{0:F1}}, {{1:F1}})、({{2:F1}}, {{3:F1}})", M.X, M.Y, N.X, N.Y);
         }

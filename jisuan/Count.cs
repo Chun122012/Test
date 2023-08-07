@@ -25,7 +25,7 @@ namespace jisuan
 
             C.X = vectorBC.X + B.X;
             C.Y = vectorBC.Y + B.Y;
-            Console.WriteLine($"该点的坐标为：({C.X:F1}, {C.Y:F1})");
+            Console.WriteLine($"该点的坐标为：({C.X:F2}, {C.Y:F2})");
         }
 
         public static void Text2(PointF pointA, float offset)
@@ -43,7 +43,7 @@ namespace jisuan
 
             C.X = pointA.X + offset * (float)Math.Cos(angle);
             C.Y = pointA.Y + offset * (float)Math.Sin(angle);
-            Console.WriteLine($"该点的坐标为：({C.X:F1}, {C.Y:F1})");
+            Console.WriteLine($"该点的坐标为：({C.X:F2}, {C.Y:F2})");
         }
 
         public static void Text3(PointF A, PointF B, float R, float Rotation_A )
@@ -57,7 +57,7 @@ namespace jisuan
             C.Y = (float)Math.Sin(Rotation_A * (float)Math.PI / 180) * R + A.Y;
             C.X = (float)Math.Cos(Rotation_A * (float)Math.PI / 180) * R + A.X;
 
-            Console.WriteLine($"该点的坐标为：({C.X:F1}, {C.Y:F1})");
+            Console.WriteLine($"该点的坐标为：({C.X:F2}, {C.Y:F2})");
         }
 
         public static void Text4(Vector3 A, Vector3 B, Vector3 C)
@@ -88,7 +88,7 @@ namespace jisuan
             float L = (float)Math.Sqrt(N.X * N.X + N.Y * N.Y + N.Z * N.Z);
             Vector3 n = N / L;
 
-            Console.WriteLine($"单位法向量：({n.X:F1}, {n.Y:F1}, {n.Z:F1})");
+            Console.WriteLine($"单位法向量：({n.X:F2}, {n.Y:F2}, {n.Z:F2})");
         }
 
         public static void Text5(PointF A, PointF B, PointF C, PointF D)
@@ -109,7 +109,7 @@ namespace jisuan
             y = k1 * (x - A.X) + A.Y;
 
             PointF E = new(x, y);
-            Console.WriteLine($"该点的坐标为：({E.X:F1}, {E.Y:F1})");
+            Console.WriteLine($"该点的坐标为：({E.X:F2}, {E.Y:F2})");
         }
 
         public static void Text6(PointF O, PointF A, float R)
@@ -121,7 +121,7 @@ namespace jisuan
             float AO = (float)Math.Sqrt((O.X - A.X) * (O.X - A.X) + (O.Y - A.Y) * (O.Y - A.Y));
             if (AO == R)
             {
-                Console.WriteLine("点A在圆上，切点只有一个：({0:F1}, {1:F1}))", A.X, A.Y);
+                Console.WriteLine("点A在圆上，切点只有一个：({0:F2}, {1:F2}))", A.X, A.Y);
                 return;
             }
 
@@ -136,7 +136,7 @@ namespace jisuan
             N.X = O.X + R * (float)Math.Cos(angle2);
             N.Y = O.Y + R * (float)Math.Sin(angle2);
 
-            Console.WriteLine($"该点的坐标为：({{0:F1}}, {{1:F1}})、({{2:F1}}, {{3:F1}})", M.X, M.Y, N.X, N.Y);
+            Console.WriteLine($"该点的坐标为：({{0:F2}}, {{1:F2}})、({{2:F2}}, {{3:F2}})", M.X, M.Y, N.X, N.Y);
         }
 
 
@@ -166,7 +166,7 @@ namespace jisuan
                 float Y1 = k * X1 + b;
                 float X2 = (float)(-b1 - Math.Sqrt(b1 * b1 - 4 * a * c)) / (2 * a);
                 float Y2 = k * X2 + b;
-                Console.WriteLine("直线与圆有两个交点，交点为：({0:F1}, {1:F1})、({2:F1}, {3:F1})", X1, Y1, X2, Y2);
+                Console.WriteLine("直线与圆有两个交点，交点为：({0}, {1})、({2}, {3})", X1, Y1, X2, Y2);
             }
         }
 
@@ -174,7 +174,9 @@ namespace jisuan
 
         public static void Text8(PointF O,  PointF P, float R)
         {
-            if ((P.X - O.X) * (P.X - O.X) + (P.Y - O.Y) * (P.Y - O.Y) != R * R)
+            float OP = (float)Math.Sqrt((P.Y - O.Y) * (P.Y - O.Y) + (P.X - O.X) * (P.X - O.X));
+
+            if (OP != R)
             {
                 Console.WriteLine("P点不是圆的切点，请重新输入");
                 return;
@@ -204,7 +206,7 @@ namespace jisuan
 
             angle = (float)Math.Atan2(P.Y, P.X - X.X) * 180 / (float)Math.PI;
 
-            Console.WriteLine("切点P的切线的方向角度数是：{0:F1}", angle);
+            Console.WriteLine("切点P的切线的方向角度数是：{0:F2}", angle);
         }
     }
 }

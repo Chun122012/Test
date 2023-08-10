@@ -140,6 +140,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::三角形向量计算.Properties.Resources.示意图;
             this.pictureBox1.Location = new System.Drawing.Point(51, 215);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(261, 185);

@@ -17,9 +17,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "三角形向量计算", "�
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "计算", "计算", "{AF433DB8-65FB-47F9-ABF1-E6E5A373FF75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jiSuan", "jisuan\jiSuan.csproj", "{AB214840-2E37-4543-861E-46D96AB9AD98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jiSuan", "jisuan\jiSuan.csproj", "{AB214840-2E37-4543-861E-46D96AB9AD98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jiSuanTest", "jiSuanTest\jiSuanTest.csproj", "{ABCB6875-DE74-4CA0-94EA-1820A51D5DEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jiSuanTest", "jiSuanTest\jiSuanTest.csproj", "{ABCB6875-DE74-4CA0-94EA-1820A51D5DEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "搭接接头坐标", "搭接接头坐标\搭接接头坐标.csproj", "{FC285A34-DCFE-41A5-8805-027DA7ADC00B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,10 @@ Global
 		{ABCB6875-DE74-4CA0-94EA-1820A51D5DEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABCB6875-DE74-4CA0-94EA-1820A51D5DEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABCB6875-DE74-4CA0-94EA-1820A51D5DEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC285A34-DCFE-41A5-8805-027DA7ADC00B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC285A34-DCFE-41A5-8805-027DA7ADC00B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC285A34-DCFE-41A5-8805-027DA7ADC00B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC285A34-DCFE-41A5-8805-027DA7ADC00B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

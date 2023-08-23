@@ -120,6 +120,9 @@ namespace 坐标计算
             float HG = OY - ON;
             float OH = (float)Math.Sqrt(ON * ON + GY * GY);
 
+            N.X = (float)Math.Cos(angle4) * ON;
+            N.Y = (float)Math.Sin(angle4) * ON;
+
             float OB = (float)Math.Sqrt((By - Oy) * (By - Oy) + (Bx - Ox) * (Bx - Ox));
             Vector2 ob = new Vector2(B.X - O.X, B.Y - O.Y);
             Vector2 oh = new Vector2();

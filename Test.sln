@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "搭接接头坐标", "搭�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "坐标计算", "坐标计算\坐标计算.csproj", "{985FC9D6-AFA3-40FD-825B-9E63D5837665}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "水果方案", "水果方案\水果方案.csproj", "{3FB5B4D6-4414-488A-8A36-C7270D41B175}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{985FC9D6-AFA3-40FD-825B-9E63D5837665}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{985FC9D6-AFA3-40FD-825B-9E63D5837665}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{985FC9D6-AFA3-40FD-825B-9E63D5837665}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FB5B4D6-4414-488A-8A36-C7270D41B175}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FB5B4D6-4414-488A-8A36-C7270D41B175}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FB5B4D6-4414-488A-8A36-C7270D41B175}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FB5B4D6-4414-488A-8A36-C7270D41B175}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -36,7 +36,7 @@ namespace 水果方案
             }
 
             int Price = int.Parse(text1);
-            int Apple = int.Parse(text1);
+            int Apple = int.Parse(text2);
             int Watermelon = int.Parse(text3);
             int Cherries = int.Parse(text4);
             int Durian = int.Parse(text5);
@@ -53,7 +53,14 @@ namespace 水果方案
                     {
                         for (int d = 0; d <= Price / Durian; d++)
                         {
-                            if (Apple * a + Watermelon * w + Cherries * c + Durian * d == Price)
+                            if (Apple * a + Watermelon * w + Cherries * c + Durian * d == 0)
+                            {
+                                break;
+                            }
+                            else if (
+                                Price / (Apple * a + Watermelon * w + Cherries * c + Durian * d) == 1 && 
+                                Price % (Apple * a + Watermelon * w + Cherries * c + Durian * d) < 10
+                                )
                             {
                                 fruit.Add("苹果数量：" + a + " ，西瓜数量：" + w + " ，车厘子数量：" + c + " ，榴莲数量：" + d);
                                 count++;

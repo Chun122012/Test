@@ -53,7 +53,7 @@ namespace 水果方案
                     {
                         for (int d = 0; d <= Price / Durian; d++)
                         {
-                            if (Price - (Apple * a + Watermelon * w + Cherries * c + Durian * d) < 10 &&
+                            if (Price - (Apple * a + Watermelon * w + Cherries * c + Durian * d) < Apple &&
                                 Price - (Apple * a + Watermelon * w + Cherries * c + Durian * d) > 0 ||
                                 Price == Apple * a + Watermelon * w + Cherries * c + Durian * d)
                             {

@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "坐标计算", "坐标计�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "水果方案", "水果方案\水果方案.csproj", "{3FB5B4D6-4414-488A-8A36-C7270D41B175}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "委托", "委托\委托.csproj", "{17F37D9D-FF58-4851-BB80-C4C0813E2102}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "委托2", "委托2\委托2.csproj", "{65A2A432-288A-4DD7-BF1B-72A08387DF54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +81,14 @@ Global
 		{3FB5B4D6-4414-488A-8A36-C7270D41B175}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FB5B4D6-4414-488A-8A36-C7270D41B175}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FB5B4D6-4414-488A-8A36-C7270D41B175}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17F37D9D-FF58-4851-BB80-C4C0813E2102}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17F37D9D-FF58-4851-BB80-C4C0813E2102}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17F37D9D-FF58-4851-BB80-C4C0813E2102}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17F37D9D-FF58-4851-BB80-C4C0813E2102}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65A2A432-288A-4DD7-BF1B-72A08387DF54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65A2A432-288A-4DD7-BF1B-72A08387DF54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65A2A432-288A-4DD7-BF1B-72A08387DF54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65A2A432-288A-4DD7-BF1B-72A08387DF54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

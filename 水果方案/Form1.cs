@@ -53,17 +53,9 @@ namespace 水果方案
                     {
                         for (int d = 0; d <= Price / Durian; d++)
                         {
-                            if (Apple * a + Watermelon * w + Cherries * c + Durian * d == 0)
-                            {
-                                break;
-                            }
-                            else if (
-                                (
-                                Price / (Apple * a + Watermelon * w + Cherries * c + Durian * d) == 1 && 
-                                Price % (Apple * a + Watermelon * w + Cherries * c + Durian * d) < 10) ||(
-                                Price / (Apple * a + Watermelon * w + Cherries * c + Durian * d) == 1 &&
-                                Price == (Apple * a + Watermelon * w + Cherries * c + Durian * d))
-                                )
+                            if (Price - (Apple * a + Watermelon * w + Cherries * c + Durian * d) < 10 &&
+                                Price - (Apple * a + Watermelon * w + Cherries * c + Durian * d) > 0 ||
+                                Price == Apple * a + Watermelon * w + Cherries * c + Durian * d)
                             {
                                 fruit.Add("苹果数量：" + a + " ，西瓜数量：" + w + " ，车厘子数量：" + c + " ，榴莲数量：" + d);
                                 count++;

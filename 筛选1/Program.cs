@@ -7,10 +7,10 @@ namespace 筛选1
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("请输入过直线的一个坐标");
+            Console.WriteLine("请输入直线的起点坐标");
             string a = Console.ReadLine();
 
-            Console.WriteLine("请输入过直线的另一个坐标");
+            Console.WriteLine("请输入直线的终点坐标");
             string b = Console.ReadLine();
 
             string[] A = a.Split(',', (char)StringSplitOptions.RemoveEmptyEntries);
@@ -38,8 +38,8 @@ namespace 筛选1
 
             for (int i = 0; i < int.Parse(num); i++)
             {
-                int x = random.Next(0, 100);
-                int y = random.Next(0, 100);
+                int x = random.Next(-100, 100);
+                int y = random.Next(-100, 100);
                 point.Add(new Point(x, y));
             }
 

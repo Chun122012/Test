@@ -33,8 +33,8 @@ namespace 筛选2
 
             Random random = new Random();
 
-            List<Point> direction = new List<Point>();
-            List<Point> right = new List<Point>();
+            List<Point> same = new List<Point>();
+            List<Point> opposite = new List<Point>();
             List<Point> point = new List<Point>();
 
             for (int i = 0; i < int.Parse(num); i++)
@@ -53,24 +53,24 @@ namespace 筛选2
 
                 if (Ax == Bx)
                 {
-                    if (Ay > By && point[i].Y < Ay)
+                    if ((Ay > By && point[i].Y < Ay) || (Ay < Bx && point[i].Y > Ay) )
                     {
-                        direction.Add(point[i]);
+                        same.Add(point[i]);
                     }
-                    else if (Ay < Bx && point[i].Y > Ay)
+                    else if ((Ay > By && point[i].Y > Ay) || (Ay < Bx && point[i].Y < Ay))
                     {
-                        direction.Add(point[i]);
+                        opposite.Add(point[i]);
                     }
                 }
                 else if (Ay == By)
                 {
-                    if (Ax > Bx && point[i].X < Ax)
+                    if ((Ax > Bx && point[i].X < Ax) || (Ax < Bx && point[i].Y > Ax))
                     {
-                        direction.Add(point[i]);
+                        same.Add(point[i]);
                     }
-                    else if (Ax < Bx && point[i].Y > Ax)
+                    else if ((Ax > Bx && point[i].X > Ax) || (Ax < Bx && point[i].Y < Ax))
                     {
-                        direction.Add(point[i]);
+                        opposite.Add(point[i]);
                     }
                 }
                 else
@@ -83,16 +83,25 @@ namespace 筛选2
                     float Y = k2 * point[i].X + c2;
                     if (Y < point[i].Y)
                     {
-                        direction.Add(point[i]);
+                        same.Add(point[i]);
+                    }
+                    else if(Y > point[i].Y)
+                    {
+                        opposite.Add(point[i]);
                     }
                 }
             }
-            Console.WriteLine("direction:");
-            for (int i = 0; i < direction.Count; i++)
+            Console.WriteLine("同方向:");
+            for (int i = 0; i < same.Count; i++)
             {
-                Console.WriteLine(direction[i]);
+                Console.WriteLine(same[i]);
             }
-            
+            Console.WriteLine("-----------------");
+            Console.WriteLine("反方向:");
+            for (int i = 0; i < opposite.Count; i++)
+            {
+                Console.WriteLine(opposite[i]);
+            }
         }
     }
 }

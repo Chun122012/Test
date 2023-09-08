@@ -31,9 +31,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "委托", "委托\委托.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "委托2", "委托2\委托2.csproj", "{65A2A432-288A-4DD7-BF1B-72A08387DF54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "筛选1", "筛选1\筛选1.csproj", "{A83AD7FA-0995-4844-8E10-6778D6905041}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "筛选1", "筛选1\筛选1.csproj", "{A83AD7FA-0995-4844-8E10-6778D6905041}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "筛选2", "筛选2\筛选2.csproj", "{D6AFCFFF-7045-4351-89B1-ECAEAC0092E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "筛选2", "筛选2\筛选2.csproj", "{D6AFCFFF-7045-4351-89B1-ECAEAC0092E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "两圆位置关系", "两圆位置关系\两圆位置关系.csproj", "{5C87C47B-0C6C-4240-9579-B07FA7771B5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -101,6 +103,10 @@ Global
 		{D6AFCFFF-7045-4351-89B1-ECAEAC0092E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6AFCFFF-7045-4351-89B1-ECAEAC0092E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6AFCFFF-7045-4351-89B1-ECAEAC0092E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C87C47B-0C6C-4240-9579-B07FA7771B5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C87C47B-0C6C-4240-9579-B07FA7771B5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C87C47B-0C6C-4240-9579-B07FA7771B5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C87C47B-0C6C-4240-9579-B07FA7771B5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
